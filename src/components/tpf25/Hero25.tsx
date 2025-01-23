@@ -34,7 +34,7 @@ export function Hero25() {
           <p className="pl-2">
             Please look forward to it, and feel free to{' '}
             <Link
-              href="mailto:zhouchunjie@techpodfest.com"
+              href="mailto:chunjie@techpodfest.com"
               className="group inline-flex items-center gap-1 font-semibold text-cyan-600 transition-all hover:text-cyan-400 dark:text-cyan-400 dark:hover:text-cyan-300"
             >
               <Mail className="h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
