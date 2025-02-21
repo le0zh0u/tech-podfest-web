@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import { DM_Sans, Inter } from 'next/font/google'
 import clsx from 'clsx'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { useAppStore } from '@/store'
 
 import '@/styles/tailwind.css'
 
@@ -32,6 +33,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // 从系统获取初始暗色模式偏好
+  if (typeof window !== 'undefined') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    useAppStore.getState().setIsDarkMode(isDarkMode)
+  }
+
   return (
     <html
       lang="en"
@@ -40,6 +47,7 @@ export default function RootLayout({
         inter.variable,
         dmSans.variable,
       )}
+      suppressHydrationWarning
     >
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">{children}</div>

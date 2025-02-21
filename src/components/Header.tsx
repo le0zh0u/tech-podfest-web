@@ -5,14 +5,29 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import logoImage from '@/images/logos/Tech_Podfest_logo.png'
 import Image from 'next/image'
-
-const navLinks = [
-  { label: 'TPF25', href: '/tpf25', isActive: true },
-  { label: 'TPF23', href: 'https://podfest.tech', isActive: false },
-  // { label: 'TPF22', href: '/tpf22', isActive: false },
-] as const
+import { Moon, Sun } from 'lucide-react'
+import { useAppStore } from '@/store'
+import { useEffect, useMemo } from 'react'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
+  const { isDarkMode, setIsDarkMode, navLinks, updateNavLink } = useAppStore()
+  const pathname = usePathname()
+
+  // 根据当前路由更新导航链接的激活状态
+  useEffect(() => {
+    navLinks.forEach((link) => {
+      const isActive =
+        link.href === '/' ? pathname === '/' : pathname.startsWith(link.href)
+      updateNavLink(link.href, isActive)
+    })
+  }, [pathname, updateNavLink]) // 只依赖 pathname
+
+  // 同步暗色模式到 html 标签
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDarkMode)
+  }, [isDarkMode])
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50 bg-transparent backdrop-blur-md">
       <motion.div
@@ -32,7 +47,7 @@ export function Header() {
             <Link href="/" aria-label="Home">
               <Image
                 src={logoImage}
-                className="size-32"
+                className="size-16"
                 width={1000}
                 height={1000}
                 alt="Tech Podfest Logo"
@@ -59,6 +74,18 @@ export function Header() {
                 <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
+
+            {/* 添加暗色模式切换按钮 */}
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="rounded-full p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+            >
+              {isDarkMode ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
           </motion.div>
         </Container>
       </nav>

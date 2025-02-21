@@ -12,7 +12,7 @@ import { AuroraBackground } from '@/components/ui/aurora-background'
 export default function TPF25() {
   return (
     <AuroraBackground>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Hero25 />
       </main>
