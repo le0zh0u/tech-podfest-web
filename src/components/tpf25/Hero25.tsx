@@ -5,10 +5,11 @@ import { Container } from '@/components/Container'
 import { Mail } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Contact } from './Contact'
 
 export function Hero25() {
   return (
-    <Container className="relative pt-20">
+    <Container className="relative pt-40">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,18 +33,16 @@ export function Hero25() {
         <div className="relative mt-8 space-y-6 font-display text-2xl tracking-normal text-slate-700/90 dark:text-slate-300/90">
           <div className="absolute -left-6 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-cyan-500/50 to-transparent" />
           <p className="pl-2">
-            Please look forward to it, and feel free to{' '}
-            <Link
-              href="mailto:chunjie@techpodfest.com"
-              className="group inline-flex items-center gap-1 font-semibold text-cyan-600 transition-all hover:text-cyan-400 dark:text-cyan-400 dark:hover:text-cyan-300"
-            >
-              <Mail className="h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
-              contact us
-              <span className="ml-0.5 inline-block transition-transform group-hover:translate-x-0.5">
-                →
-              </span>
-            </Link>{' '}
-            for any related collaborations.
+            Tech PodFest 2025 is reimagining the intersection of technology,
+            innovation, and audio storytelling. While details remain under
+            wraps, this year&apos;s event promises a revolutionary platform for
+            podcasters, developers, and tech enthusiasts to explore emerging
+            trends like AI-driven content creation, immersive spatial audio, and
+            decentralized media ecosystems. Behind the scenes, our team is
+            crafting groundbreaking sessions—from hands-on workshops on
+            generative audio tools to thought-provoking panels on ethical AI in
+            storytelling—designed to spark collaboration and redefine
+            what&apos;s possible in tech-driven podcasting.
           </p>
         </div>
         <dl className="mt-16 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-20 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">

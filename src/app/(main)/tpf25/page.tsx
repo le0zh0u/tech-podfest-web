@@ -1,21 +1,19 @@
 'use client'
 
 import { Hero25 } from '@/components/tpf25/Hero25'
-import { Newsletter } from '@/components/Newsletter'
-import { Schedule } from '@/components/Schedule'
-import { Speakers } from '@/components/Speakers'
-import { Sponsors } from '@/components/Sponsors'
 import React from 'react'
-import { Header } from '@/components/Header'
 import { AuroraBackground } from '@/components/ui/aurora-background'
+import { Contact } from '@/components/tpf25/Contact'
 
 export default function TPF25() {
   return (
-    <AuroraBackground>
-      {/* <Header /> */}
-      <main>
-        <Hero25 />
-      </main>
-    </AuroraBackground>
+    <div className="relative min-h-screen bg-zinc-50 text-slate-950 dark:bg-zinc-900">
+      <AuroraBackground>
+        <main className="flex-1">
+          <Hero25 />
+        </main>
+      </AuroraBackground>
+      <Contact />
+    </div>
   )
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface CarouselItem {
-  title: string
+  title: React.ReactNode
   image: string
 }
 
@@ -41,9 +41,7 @@ export function Carousel({ items }: CarouselProps) {
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-12">
-            <h1 className="max-w-4xl text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-              {items[currentIndex].title}
-            </h1>
+            {items[currentIndex].title}
           </div>
         </motion.div>
       </AnimatePresence>

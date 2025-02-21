@@ -7,15 +7,42 @@ import { Carousel } from '@/components/home/Carousel'
 export function HomeHero() {
   const heroContent = [
     {
-      title: 'Build. Create. Disrupt: Your Voice in the Audio Revolution',
-      image: '/path/to/image1.jpg', // 请替换为实际图片路径
+      title: (
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+            Build. Create. Disrupt
+          </h1>
+          <p className="text-xl text-white/90 sm:text-2xl">
+            Your Voice in the Audio Revolution
+          </p>
+        </div>
+      ),
+      image: '/path/to/image1.jpg',
     },
     {
-      title: '🎧 Tech PodFest: Where Innovation Hits Play. 🎧',
+      title: (
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+            Tech PodFest
+          </h1>
+          <p className="text-xl text-white/90 sm:text-2xl">
+            Where Innovation Hits Play
+          </p>
+        </div>
+      ),
       image: '/path/to/image2.jpg',
     },
     {
-      title: 'Code the Soundwaves: A Playground for Podcast Innovators',
+      title: (
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
+            Code the Soundwaves
+          </h1>
+          <p className="text-xl text-white/90 sm:text-2xl">
+            A Playground for Podcast Innovators
+          </p>
+        </div>
+      ),
       image: '/path/to/image3.jpg',
     },
   ]
