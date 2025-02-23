@@ -1,0 +1,17 @@
+.bg-grid-slate-200\/20 {
+  background-image: linear-gradient(
+      to right,
+      rgb(226 232 240 / 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(226 232 240 / 0.2) 1px, transparent 1px);
+}
+
+.bg-grid-slate-700\/20 {
+  background-image: linear-gradient(
+      to right,
+      rgb(51 65 85 / 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(51 65 85 / 0.2) 1px, transparent 1px);
+}

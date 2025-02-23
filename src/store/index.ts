@@ -26,9 +26,9 @@ export const useAppStore = create<AppState>()(
       setLanguage: (lang) => set({ language: lang }),
       navLinks: [
         { label: 'Home', href: '/', isActive: true },
-        { label: 'TPF25', href: '/tpf25', isActive: true },
+        { label: 'TPF25', href: '/tpf25', isActive: false },
         { label: 'TPF23', href: 'https://podfest.tech', isActive: false },
-        // { label: 'TPF22', href: '/tpf22', isActive: false },
+        { label: 'TPF22', href: '/tpf22', isActive: false },
       ],
       updateNavLink: (href, isActive) =>
         set((state) => ({
@@ -38,7 +38,9 @@ export const useAppStore = create<AppState>()(
         })),
     }),
     {
-      name: 'app-storage', // 持久化存储的键名
+      name: 'app-storage',
+      version: 1,
+      partialize: (state) => ({ isDarkMode: state.isDarkMode }),
     },
   ),
 )

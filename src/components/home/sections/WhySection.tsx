@@ -41,7 +41,7 @@ export const WhySection = () => {
         transition={{ duration: 0.5 }}
         className="mx-auto"
       >
-        <SectionTitle>Why Tech PodFest</SectionTitle>
+        <SectionTitle>Why</SectionTitle>
 
         <div className="mt-12">
           <motion.div
