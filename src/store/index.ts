@@ -27,6 +27,7 @@ export const useAppStore = create<AppState>()(
       navLinks: [
         { label: 'Home', href: '/', isActive: true },
         { label: 'TPF25', href: '/tpf25', isActive: false },
+        { label: 'TPF24', href: '/tpf24', isActive: false },
         { label: 'TPF23', href: 'https://podfest.tech', isActive: false },
         { label: 'TPF22', href: '/tpf22', isActive: false },
       ],
