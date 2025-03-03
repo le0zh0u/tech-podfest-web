@@ -22,7 +22,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: {
     template: '%s - Tech PodFest',
-    default: 'Tech PodFest - Global Tech Podcast Festival',
+    default: 'Tech PodFest - Where Innovation Hits Play',
   },
   description:
     'Tech PodFest is a global tech podcast festival, bringing together the best tech podcasts from around the world.',
