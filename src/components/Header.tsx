@@ -3,7 +3,7 @@
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import logoImage from '@/images/logos/Tech_Podfest_logo.png'
+import logoImage from '@/images/logos/logo.jpg'
 import Image from 'next/image'
 import { Moon, Sun } from 'lucide-react'
 import { useAppStore } from '@/store'

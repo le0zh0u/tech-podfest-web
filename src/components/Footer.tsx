@@ -1,6 +1,6 @@
 'use client'
 import { Container } from '@/components/Container'
-import logoImage from '@/images/logos/Tech_Podfest_logo.png'
+import logoImage from '@/images/logos/logo.jpg'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
