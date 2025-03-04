@@ -34,49 +34,26 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-l from-purple-500/10 to-pink-500/10 blur-[120px]" />
       </div>
 
-      {/* Hero 部分 */}
-      <div className="relative h-screen">
-        <motion.div style={{ opacity, scale }}>
-          <HomeHero />
-        </motion.div>
-
+      {/* Hero 部分 - 调整移动端顶部间距和高度 */}
+      <div className="relative min-h-[100vh] pt-16 sm:pt-20 md:pt-24">
         <motion.div
-          className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 md:bottom-10"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          style={{ opacity, scale }}
+          className="pb-16 sm:pb-20 md:pb-24"
         >
-          <div className="flex flex-col items-center">
-            <p className="mb-2 text-sm font-medium text-slate-500 dark:text-slate-400">
-              Scroll to discover
-            </p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="animate-bounce text-slate-400 dark:text-slate-500"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </div>
+          <HomeHero />
         </motion.div>
       </div>
 
-      {/* 内容部分 */}
+      {/* 内容部分 - 确保与Hero部分没有重叠 */}
       <Container>
-        <div className="relative z-10 mt-20 space-y-32 pb-20">
+        <div className="relative z-10 space-y-32 pb-20">
           {/* What Section */}
           <motion.section
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: '-100px' }}
+            className="pt-4 sm:pt-6 md:pt-8"
           >
             <WhatSection />
           </motion.section>
