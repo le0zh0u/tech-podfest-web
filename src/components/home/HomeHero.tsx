@@ -31,7 +31,7 @@ export function HomeHero() {
                 onClick={scrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:shadow-cyan-500/40 sm:px-8 sm:py-4"
+                className="group relative cursor-pointer overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:shadow-cyan-500/40 sm:px-8 sm:py-4"
               >
                 <span className="relative z-10">Connect with us</span>
                 <span className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
