@@ -214,7 +214,9 @@ export function TPF24Sections() {
                 创作者大会精彩内容，探索空间计算带来的无限可能！
               </p>
               <Link
-                href="#subscribe"
+                href="https://www.xiaoyuzhoufm.com/podcast-topic/66403cc1af1e22bb15c7156c?s=eyJ1IjogIjYxYjc2NzEyZTBmNWU3MjNiYmRhNjEwMCJ9"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-blue-600 shadow-sm transition hover:bg-blue-50"
               >
                 <span>订阅频道</span>

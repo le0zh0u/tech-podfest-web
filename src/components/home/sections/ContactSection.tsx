@@ -24,19 +24,19 @@ export const ContactSection = () => {
         </svg>
       ),
     },
-    // {
-    //   name: '即刻',
-    //   href: 'https://web.okjike.com/u/techpodfest',
-    //   icon: (
-    //     <Image
-    //       src="/images/okjike.png"
-    //       alt="即刻"
-    //       width={24}
-    //       height={24}
-    //       className="h-6 w-6 object-contain"
-    //     />
-    //   ),
-    // },
+    {
+      name: '即刻',
+      href: 'https://okjk.co/sYSIBr',
+      icon: (
+        <Image
+          src="/images/okjike.png"
+          alt="即刻"
+          width={24}
+          height={24}
+          className="h-6 w-6 object-contain"
+        />
+      ),
+    },
     {
       name: 'Email',
       href: 'mailto:contact@techpodfest.com',

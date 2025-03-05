@@ -1,26 +1,37 @@
 'use client'
 
+import { Container } from '@/components/Container'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export function Hero22() {
+  const heroRef = useRef(null)
+  const isInView = useInView(heroRef, { once: true, amount: 0.2 })
+
   return (
-    <div className="relative w-full">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative aspect-[16/9] w-full"
-      >
-        <Image
-          src="/images/tpf22/hero.png"
-          alt="技术播客月"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" /> */}
-      </motion.div>
-    </div>
+    <section ref={heroRef} className="py-12">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8 }}
+          className="relative overflow-hidden rounded-3xl shadow-xl"
+        >
+          <div className="relative bg-slate-100 dark:bg-slate-800">
+            <div className="flex justify-center">
+              <Image
+                src="/images/tpf22/hero.png"
+                alt="技术播客月"
+                width={1200}
+                height={675}
+                className="h-auto w-full"
+                priority
+              />
+            </div>
+          </div>
+        </motion.div>
+      </Container>
+    </section>
   )
 }

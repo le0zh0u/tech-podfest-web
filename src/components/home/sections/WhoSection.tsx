@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { SectionTitle } from '../ui/SectionTitle'
+import { scrollToContact } from '@/utils/scroll'
 
 export const WhoSection = () => {
   const sectionRef = useRef(null)
@@ -203,11 +204,12 @@ export const WhoSection = () => {
                 .
               </p>
               <motion.button
+                onClick={scrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className="mt-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3 font-medium text-white shadow-lg shadow-blue-500/25 transition-shadow hover:shadow-blue-500/40"
               >
-                Join the Community
+                Connect with us
               </motion.button>
             </div>
           </motion.div>

@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { SectionTitle } from '../ui/SectionTitle'
+import { scrollToContact } from '@/utils/scroll'
 
 export const WhySection = () => {
   const sectionRef = useRef(null)
@@ -183,11 +184,12 @@ export const WhySection = () => {
 
               <div className="flex items-center justify-center">
                 <motion.button
+                  onClick={scrollToContact}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   className="rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 font-medium text-white shadow-lg shadow-cyan-500/25 transition-shadow hover:shadow-cyan-500/40"
                 >
-                  Join Our Community
+                  Connect with us
                 </motion.button>
               </div>
             </motion.div>
